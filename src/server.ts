@@ -12,7 +12,9 @@ import applicantRoutes from './routes/applicantRoutes';
 import authRoutes from './routes/authRoutes';
 
 // Middleware
-app.use(cors());
+app.use(cors({
+    origin: ["http://localhost:3000", "https://umurava-ai-omega.vercel.app"]
+}));
 app.use(express.json());
 
 // Routes
